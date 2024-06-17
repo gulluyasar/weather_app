@@ -26,7 +26,7 @@ class WeatherData {
 
   Future<void> getCurrentTemperature() async {
     Response response = await get(Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=4203d4bf1c22fe10838d0a5b23347659&units=metric"));
+        "https://api.openweathermap.org/data/2.5/weather?lat=${locationData.latitude}&lon=${locationData.longitude}&appid=#YOUR_API_KEY&units=metric"));
 
     if (response.statusCode == 200) {
       String data = response.body;
